@@ -1,52 +1,58 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 from graphics import *
 from random import *
 
 def mmult(vect1, vect2):
-    return sum(z[0]*z[1] for z in zip(vect1,vect2))
+    result = sum(z[0]*z[1] for z in zip(vect1,vect2))
+    print result
+    return result
 
 matrix_f1 = [
     [0.0, 0.0],
     [0.0, 0.16]
 ]
+delta_f1 = [0.0, 0.0]
+
 matrix_f2 = [
     [0.85, 0.04],
     [-0.04, 0.85]
 ]
+delta_f2 = [0.0, 1.6]
+
 matrix_f3 = [
     [0.20, -0.26],
     [0.23, 0.22]
 ]
+delta_f3 = [0.0, 1.6]
+
 matrix_f4 = [
     [-0.15, 0.28],
     [0.26, 0.24]
 ]
-
+delta_f4 = [0.0, 0.44]
 
 def f1(old_x, old_y):
-    new_x = mmult([old_x, old_y], matrix_f1[0])
-    new_y = mmult([old_x, old_y], matrix_f1[1])
-    new_x = 0 * old_x # 0 * old_x
-    new_y = 0.16 * old_y # 0.16 * old_y
+    new_x = mmult([old_x, old_y], matrix_f1[0]) + delta_f1[0]
+    new_y = mmult([old_x, old_y], matrix_f1[1]) + delta_f1[1]
     return new_x, new_y
 
 
 def f2(old_x, old_y):
-    new_x = 0.85 * old_x + 0.04 * old_y # 0.85 * old_x + 0.04 * old_y
-    new_y = -0.04 * old_x + 0.85 * old_y + 1.60 # -0.04 * old_x + 0.85 * old_y + 1.60
+    new_x = mmult([old_x, old_y], matrix_f2[0]) + delta_f2[0]
+    new_y = mmult([old_x, old_y], matrix_f2[1]) + delta_f2[1]
     return new_x, new_y
 
 
 def f3(old_x, old_y):
-    new_x = 0.20 * old_x - 0.26 * old_y # 0.20 * old_x - 0.26 * old_y
-    new_y = 0.23 * old_x + 0.22 * old_y + 1.60 # 0.23 * old_x + 0.22 * old_y + 1.60
+    new_x = mmult([old_x, old_y], matrix_f3[0]) + delta_f3[0]
+    new_y = mmult([old_x, old_y], matrix_f3[1]) + delta_f3[1]
     return new_x, new_y
 
 
 def f4(old_x, old_y):
-    new_x = -0.15 * old_x + 0.28 * old_y # -0.15 * old_x + 0.28 * old_y
-    new_y = 0.26 * old_x + 0.24 * old_y + 0.44 # 0.26 * old_x + 0.24 * old_y + 0.44
+    new_x = mmult([old_x, old_y], matrix_f1[0]) + delta_f4[0]
+    new_y = mmult([old_x, old_y], matrix_f1[1]) + delta_f4[1]
     return new_x, new_y
 
 
