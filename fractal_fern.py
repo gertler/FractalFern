@@ -3,8 +3,30 @@
 from graphics import *
 from random import *
 
+def mmult(vect1, vect2):
+    return sum(z[0]*z[1] for z in zip(vect1,vect2))
+
+matrix_f1 = [
+    [0.0, 0.0],
+    [0.0, 0.16]
+]
+matrix_f2 = [
+    [0.85, 0.04],
+    [-0.04, 0.85]
+]
+matrix_f3 = [
+    [0.20, -0.26],
+    [0.23, 0.22]
+]
+matrix_f4 = [
+    [-0.15, 0.28],
+    [0.26, 0.24]
+]
+
 
 def f1(old_x, old_y):
+    new_x = mmult([old_x, old_y], matrix_f1[0])
+    new_y = mmult([old_x, old_y], matrix_f1[1])
     new_x = 0 * old_x # 0 * old_x
     new_y = 0.16 * old_y # 0.16 * old_y
     return new_x, new_y
