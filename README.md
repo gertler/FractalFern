@@ -14,4 +14,6 @@ This is based off of the mathematical phenomenon described by mathemtatician Mic
 ```./fractal_fern.py```
 
 ## Examples
-![This is Barnsley's fern. It uses the original matrix transformations and probabilities that Barnsley used to create the original *Black Spleenwort* fern](./images/leaf_example.png_"")
+![This is Barnsley's fern. It uses the original matrix transformations and probabilities that Barnsley used to create the original *Black Spleenwort* fern](https://user-images.githubusercontent.com/24736669/42739237-6d5c4c70-8861-11e8-9f2e-aecbade7fb8d.png)
+
+![This is a Thelypteridaceae leaf constructed using slightly altered transformations from the original fern](https://user-images.githubusercontent.com/24736669/42739238-6d6aed52-8861-11e8-9eb1-a0c21f7a5817.png)
