@@ -12,3 +12,6 @@ This is based off of the mathematical phenomenon described by mathemtatician Mic
 ```python fractal_fern.py```
 * Or just execute the program normally
 ```./fractal_fern.py```
+
+## Examples
+![This is Barnsley's fern. It uses the original matrix transformations and probabilities that Barnsley used to create the original *Black Spleenwort* fern](./images/leaf_example.png_"")
