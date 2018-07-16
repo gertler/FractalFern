@@ -4,9 +4,8 @@ from graphics import *
 from random import *
 
 def mmult(vect1, vect2):
-    result = sum(z[0]*z[1] for z in zip(vect1,vect2))
-    print result
-    return result
+    return sum(z[0]*z[1] for z in zip(vect1,vect2))
+
 
 matrix_f1 = [
     [0.0, 0.0],
@@ -32,6 +31,7 @@ matrix_f4 = [
 ]
 delta_f4 = [0.0, 0.44]
 
+
 def f1(old_x, old_y):
     new_x = mmult([old_x, old_y], matrix_f1[0]) + delta_f1[0]
     new_y = mmult([old_x, old_y], matrix_f1[1]) + delta_f1[1]
@@ -51,8 +51,8 @@ def f3(old_x, old_y):
 
 
 def f4(old_x, old_y):
-    new_x = mmult([old_x, old_y], matrix_f1[0]) + delta_f4[0]
-    new_y = mmult([old_x, old_y], matrix_f1[1]) + delta_f4[1]
+    new_x = mmult([old_x, old_y], matrix_f4[0]) + delta_f4[0]
+    new_y = mmult([old_x, old_y], matrix_f4[1]) + delta_f4[1]
     return new_x, new_y
 
 
