@@ -2,6 +2,7 @@
 
 from graphics import *
 from random import *
+import matrices
 
 def mmult(vect1, vect2):
     return sum(z[0]*z[1] for z in zip(vect1,vect2))
